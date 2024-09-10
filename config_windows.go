@@ -4,5 +4,5 @@ import "os"
 
 var hasVendorName = true
 var systemSettingFolders = []string{os.Getenv("PROGRAMDATA")}
-var globalSettingFolder = os.Getenv("APPDATA")
-var cacheFolder = os.Getenv("LOCALAPPDATA")
+var globalSettingFolder, _ = os.UserConfigDir()
+var cacheFolder, _ = os.UserCacheDir()
